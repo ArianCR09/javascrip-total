@@ -4,7 +4,7 @@
 ## curso de HTML, CSS y javascrip
 
 ## Nombre del estudiante
-    Arian Steven Ruiz Fonseca
+Arian Steven Ruiz Fonseca
 
 ### seccion 10-2
 

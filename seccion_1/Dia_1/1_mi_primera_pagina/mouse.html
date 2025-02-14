@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <script>
+        function MostrarMnesaje() {
+            alert("si hizo clic, se ejecuta MostrarMensaje")
+        }
+    </script>
+    <section>
+        <!-- <p onclick="alert('Hizo clic!')">Clic aquí</p> -->
+        <p onclick="alert('evento onclick!')">El evento se ejecuta cuando el usuario
+            hace clic con el botón izquierdo del ratón</p>
+        <p onmousedown="alert('evento onmousedown!')">Este atributo responde al evento mousedown.
+            Este
+            evento se
+            desencadena cuando el usuario pulsa el botón izquierdo o el botón derecho del ratón.</p>
+        <p onmouseup="alert('evento onmouseup!')">El evento se desencadena
+            cuando el usuario libera el botón izquierdo del ratón</p>
+        <p onmouseenter="alert('evento onmouseenter!')">Este evento se
+            desencadena cuando el ratón se introduce en el área ocupada por el elemento</p>
+        <p onmouseleave="alert('evento onmouseleave!')">Este evento se 
+            desencadena cuando el ratón abandona el área ocupada por el elemento. </p>
+        <p onmouseover="alert('evento onmouseover!')">Este evento se desencadena 
+            cuando el ratón se mueve sobre el elemento o cualquiera de sus elementos hijos.  </p>
+        <p onmouseout="alert('evento onmouseout!')">El evento se desencadena 
+            cuando el ratón abandona el área ocupada por el elemento o cualquiera de sus elementos hijos.</p>
+        <p onmousemove="alert('evento onmousemove!')">Este evento se 
+            desencadena cada vez que el ratón se encuentra sobre el elemento y se mueve. </p>
+        <p onwheel="alert('evento onwheel!')"> Este evento se desencadena cada 
+            vez que se hace girar la rueda del ratón.</p>
+
+
+
+
+
+        <p>No puede hacer clic aquí</p>
+    </section>
+    <!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+    </head>
+
+    <body>
+        <section>
+            <p onclick="alert('Hizo clic!')">Clic aquí</p>
+            <p>No puede hacer clic aquí</p>
+        </section>
+    </body>
+
+    </html>

@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(34, 212, 197);
+}
+
+h2 ~ h3{
+    background-color: rgb(185, 26, 209);
+}
+
+h1{
+    background-color: #1645de;
+}
+
+p{
+    color: rgb(85, 13, 173);
+}
+span {
+    background-color: rgb(17, 238, 161);
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        audio::-webkit-media-controls-panel {
+            background-color: rgba(5, 147, 81, 0.439);
+        }
+    </style>
+</head>
+<body>
+    <img src="bulbasour.png" alt="" width="40%">
+    <p><audio controls id="pokemon">
+        <source src="Audio_Pokemon.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="mostrarAudio()">Audio</button>
+    <script>
+        let AudioPokemon = document.getElementById("pokemon")
+        function mostrarAudio(){
+            AudioPokemon.play();
+        }
+    </script>
+    </p>
+</body>
+</html>

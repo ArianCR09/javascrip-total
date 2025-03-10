@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+   <title>Return 2</title>
+</head>
+<body>
+   <p>
+   </p>
+       <button onclick="mostrarFecha()">Click aqui</button>
+   <script>
+    function obtenerFecha() {
+        let fechaActual=new Date();
+        let fecha=fechaActual.toLocaleDateString("es-Es")
+        return(fecha)
+    }
+       function mostrarFecha() {
+           alert(obtenerFecha());
+           
+       }
+
+   </script>
+</body>
+</html>

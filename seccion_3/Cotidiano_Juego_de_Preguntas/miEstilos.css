@@ -1,6 +1,24 @@
-body{
-    background-color: darksalmon;
+body {
+
+    background: #1a2a6c;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #05fce7dc, #c95353, #0cde33);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eff70d, #14adc4, #ed840b);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 }
-body{
-    color: blanchedalmond;
+
+body {
+    color: rgb(12, 4, 233);
+    width: auto;
+    height: auto;
+}
+
+button {
+    background-color: rgb(146, 223, 199);
+    color: rgb(2, 6, 255);
+    width: 175px;
+    height: 35px;
 }

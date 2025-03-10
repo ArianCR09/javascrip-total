@@ -1,76 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
- 
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jueguito</title>
     <link rel="stylesheet" href="miEstilos.css">
-    <title>Practica 1</title>
-    <audio id="SonidoAlarma">
-        <source src="./audio/pacman-die.mp3" type="audio/mpeg">
-    </audio>
 </head>
- 
-<body onload="comenzarTiempo()">
- 
-    <h2 id="h2">Responde las siguientes preguntas</h2>
-    <h2 id="Tiempo">00:30</h2>
+<body onload="comenzar()">
+    <h1>Juego de preguntas</h1>
+    <h2 id="tiempotexto">30</h2> <!-- Iniciamos mostrando 30 segundos -->
+    <audio src="audios/gameover.mp3" id="audioAlarma"></audio>
+
+    <p>1. ¿Pais mas grande del mundo?</p>
+    <input type="text" id="p5">
+
+    <p>2. ¿¿Pais mas pequeño del mundo?</p>
+    <input type="text" id="p4">
+
+    <p>3. ¿Cuánto es 90 + 90?</p>
+    <input type="text" id="p3">
+
+    <p>4. ¿Cuánto es 5 x 5</p>
+    <input type="text" id="p2">
+
+    <p>5. ¿para que sirve visual estudio code?</p>
+    <input type="text" id="p1">
     <br>
-    <b>¿Pais mas grande del mundo?</b><br><br>
-    <input type="text" id="Respuesta1"><br><br>
- 
-    <b>¿pais mas pequeño del mundo?</b><br><br>
-    <input type="text" id="Respuesta2"><br><br>
- 
-    <b>¿Presidente de EEUU?</b><br><br>
-    <input type="text" id="Respuesta3"><br><br>
- 
-    <b>¿Para qe sirve Visual Estudio Code?</b><br><br>
-    <input type="text" id="Respuesta4"><br><br>
- 
-    <b>¿Equipo mas grande del mundo?</b><br><br>
-    <input type="text" id="Respuesta5"><br><br>
- 
-    <button onclick="mostrarRespuestas()">Termine</button><br><br>
-    <button onclick="location.reload()">Intentar de nuevo</button>
- 
+    <br>
+    <br>
+
+
+    <button onclick="finalizar()">Finalizar</button><br><br>
+    <button onclick="location.reload()">Comenzar de nuevo</button>
+
     <script>
-        let tiempoRestante = 30;
-        let elementoSonidoAlarma = document.getElementById("SonidoAlarma");
-        let elementoTiempo = document.getElementById("Tiempo");
-        let intervalo;
- 
-        function mostrarRespuestas() {
-            clearInterval(intervalo);
-            let respuestas = [
-                document.getElementById("Respuesta1").value,
-                document.getElementById("Respuesta2").value,
-                document.getElementById("Respuesta3").value,
-                document.getElementById("Respuesta4").value,
-                document.getElementById("Respuesta5").value
-            ];
- 
-            let fechaActual = new Date();
-            alert(
-                "La fecha de hoy es " +
-                fechaActual.toLocaleDateString('es-ES') +
-                " y tus respuestas son:\n" +
-                respuestas.join("\n")
-            );
+        let tiempoRestante = 30; // Tiempo inicial en segundos
+        let intervalo; // Variable para almacenar el intervalo
+        const elementoTexto = document.getElementById("tiempotexto");
+        const elementoSonidoAlarma = document.getElementById("audioAlarma");
+
+        // Función para iniciar el juego y la cuenta regresiva
+        function comenzar() {
+            tiempoRestante = 30; // Reiniciamos el tiempo
+            elementoTexto.textContent = tiempoRestante; // Mostramos 30 en el h2
+            clearInterval(intervalo); // Por si había un intervalo previo, lo detenemos
+            intervalo = setInterval(() => {
+                if (tiempoRestante > 0) { // Reducimos el tiempo
+                    tiempoRestante--;
+                    elementoTexto.textContent = tiempoRestante; // Actualizamos el h2
+                } else {
+                    tiempoCumplido(); // Cuando el tiempo llegue a 0
+                    clearInterval(intervalo); // Detenemos el intervalo
+                }
+            }, 1000); // Actualizamos cada 1 segundo
         }
- 
-        function comenzarTiempo() {
-            intervalo = setInterval(function () {
-                tiempoRestante--;
-                let minutos = Math.floor(tiempoRestante / 60).toString().padStart(2, "0");
-                let segundos = (tiempoRestante % 60).toString().padStart(2, "0");
-                elementoTiempo.textContent = minutos + ":" + segundos;
- 
-                tiempoRestante <= 0 && (clearInterval(intervalo), elementoSonidoAlarma.play(), alert("¡Game Over!"));
-            }, 1000);
+
+        // Función para cuando el tiempo se acaba
+        function tiempoCumplido() {
+            elementoTexto.textContent = "¡Tiempo agotado!";
+            elementoSonidoAlarma.play();
+            alert("GAME OVER");
+        }
+
+        // Función para finalizar el juego y mostrar las respuestas
+        function finalizar() {
+            const p1 = document.getElementById("p1").value;
+            const p2 = document.getElementById("p2").value;
+            const p3 = document.getElementById("p3").value;
+            const p4 = document.getElementById("p4").value;
+            const p5 = document.getElementById("p5").value;
+            const tiempoActual = new Date();
+            alert('Tus respuestas son:\n1: ' + p1 + '\n2: ' + p2 + '\n3: ' + p3 + '\n4: ' + p4 + '\n5: ' + p5);
         }
     </script>
- 
 </body>
- 
 </html>

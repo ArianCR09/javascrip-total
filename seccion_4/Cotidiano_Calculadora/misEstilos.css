@@ -25,10 +25,10 @@ input[type="number"] {
  
 button {
     background-color: #ff00cc;
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
-    padding: 15px 20px;
-    border-radius: 10px;
+    padding: 20px 25px;
+    border-radius: 90px;
     cursor: pointer;
     font-size: 18px;
 }
@@ -43,7 +43,7 @@ button:hover {
     border: 1px solid #5900ff;
     border-radius: 5px;
     display: inline-block;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 body {
     background: linear-gradient(to right, #4539f0, #f59494, #c526e5);

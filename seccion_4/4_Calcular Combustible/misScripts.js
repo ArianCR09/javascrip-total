@@ -1,10 +1,31 @@
-function calcularLitros() {
-    var elementoKm = document.getElementById("textoKm")
-    var textoKm = elementoKm.value;
-    var cantKm = Number(textoKm)
-
-    var cantLitros = Math.ceil(cantKm / 8.8);
-
-    var resultado = document.getElementById("textoResultado");
-    resultado.textContent = "carga " + cantLitros + " litros de combustible";
-}
+function sumar(){
+           let numero1=document.getElementById("Put1");
+           let numero2=document.getElementById("put2");
+           let resultado=parseInt(numero1.value) + parseInt(numero2.value);
+           let textoResultado=document.getElementById("resultado:")
+           textoResultado.textContent =resultado;
+        }
+ 
+        function restar(){
+           let numero1=document.getElementById("Put1");
+           let numero2=document.getElementById("put2");
+           let resultado=parseInt(numero1.value) - parseInt(numero2.value);
+           let textoResultado=document.getElementById("resultado:")
+           textoResultado.textContent =resultado;
+        }
+ 
+        function multiplicar(){
+           let numero1=document.getElementById("Put1");
+           let numero2=document.getElementById("put2");
+           let resultado=parseInt(numero1.value) * parseInt(numero2.value);
+           let textoResultado=document.getElementById("resultado:")
+           textoResultado.textContent =resultado;
+        }
+ 
+        function dividir(){
+           let numero1=document.getElementById("Put1");
+           let numero2=document.getElementById("put2");
+           let resultado=parseInt(numero1.value) / parseInt(numero2.value);
+           let textoResultado=document.getElementById("resultado:")
+           textoResultado.textContent =resultado;
+        }

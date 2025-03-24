@@ -2,6 +2,11 @@ function recomendar(genero){
     let edad = document.getElementById("edad").value;
     let recomendacion = document.getElementById("recomendacion");
 
+    if(!document.getElementById("Edad").value) {
+        alert("Por favor, ingrese tu edad antes de continuar.");
+        return;
+    }
+
     switch(genero) {
         case 'drama':
             if (edad < 13) {

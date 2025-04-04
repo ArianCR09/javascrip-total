@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practica Loop For 3</title>
+    <title>For of</title>
 </head>
 <body>
     <script>
-        function testLoop() {
-            let suma = 0;
-            for (let o = 1; o <= 4; o++) {
-                suma += o;
+        let palabra = "Bienvenido";
+ 
+        function loopear(){
+            for (let letra of palabra) {
+                document.write(letra + "<br>");
             }
-            return suma;
+            loopear(palabra)
         }
-        console.log(testLoop());
     </script>
 </body>
 </html>

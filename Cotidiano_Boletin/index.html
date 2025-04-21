@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="misEstilos.css">
+    <title>Cotidiano Boletin</title>
+</head>
+<body>
+    <h1>Bienvenido a tu Boletín estudiantil</h1>
+    <h2>Alumno: Arian Ruiz</h2>
+
+    <ul>
+        <li>33</li><br>
+        <li>56</li><br>
+        <li>10</li><br>
+        <li>90</li><br>
+        <li>70</li><br>
+    </ul>
+    <h3>Promedio:</h3> <div id="promedio">Su promedio es: </div>
+
+    <button onclick="mostrarPromedio()">Calcular Promedio</button><br>
+    <h3>Nota más Alta:</h3>
+    <div id="notaMasAlta">La nota más alta es: </div>
+    <button onclick="notaMasAlta()">Buscar nota más alta</button><br>
+    <h3>Hubo algún aplazo?</h3>
+    <div id="aplazo">Hubo algún aplazo: </div>
+    <button onclick="consultarAplazo()">Consultar aplazo</button>
+
+    <script>
+
+        function mostrarPromedio() {
+            let notas = [33, 56, 10, 90, 70];
+            let suma = notas.reduce((suma, nota) => suma + nota, 0);
+            let promedio = suma / notas.length;
+            document.getElementById("promedio").textContent = "Su promedio es: " + promedio
+        }
+    </script>
+</body>
+</html>

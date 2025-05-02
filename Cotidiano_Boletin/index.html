@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="misEstilos.css">
+    <link rel="stylesheet" href="misEstilos.css">
+    <img src="descargar.jpg"<br>
     <title>Cotidiano Boletin</title>
 </head>
 <body>
@@ -9,9 +10,9 @@
     <h2>Alumno: Arian Ruiz</h2>
 
     <ul>
-        <li>33</li><br>
-        <li>56</li><br>
-        <li>10</li><br>
+        <li>98</li><br>
+        <li>80</li><br>
+        <li>76</li><br>
         <li>90</li><br>
         <li>70</li><br>
     </ul>
@@ -25,14 +26,30 @@
     <div id="aplazo">Hubo algún aplazo: </div>
     <button onclick="consultarAplazo()">Consultar aplazo</button>
 
-    <script>
+    <script> 
+  const notas = [98, 80, 76, 90, 70];
 
-        function mostrarPromedio() {
-            let notas = [33, 56, 10, 90, 70];
-            let suma = notas.reduce((suma, nota) => suma + nota, 0);
-            let promedio = suma / notas.length;
-            document.getElementById("promedio").textContent = "Su promedio es: " + promedio
+function mostrarPromedio() {
+    let suma = 0;
+    for (const nota of notas) suma += nota;
+    document.getElementById("promedio").textContent = "Su queridisimo promedio es : " + suma / notas.length;
+}
+
+function notaMasAlta() {
+    let mayor = 0;
+    for (const nota of notas) if (nota > mayor) mayor = nota;
+    document.getElementById("notaMasAlta").textContent = "Su nota mas alta que tiene es: " + mayor;
+}
+
+function consultarAplazo() {
+    for (const nota of notas) {
+        if (nota < 50) {
+            document.getElementById("aplazo").textContent = "Sí";
+            return;
         }
+    }
+    document.getElementById("aplazo").textContent = "No";
+}
     </script>
 </body>
 </html>

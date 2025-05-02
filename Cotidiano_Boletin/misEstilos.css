@@ -1,5 +1,16 @@
-h1{
-    color: green;
-    border: 1px;
-    border-style: solid;
+
+button {
+    height: 40px;    
+    width: 200px;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: rgb(133, 11, 247);
+}
+
+h2 {
+    color: #0275e8;
+}
+
+h1 {
+    color: rgb(201, 36, 226);
 }

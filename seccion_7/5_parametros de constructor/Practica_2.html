@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 2-Constructores con Parametros</title>
+</head>
+<body>
+    <script>
+        function Apolo(marca, color, talla) {
+            this.marca = marca;
+            this.color = color;
+            this.talla = talla;
+            this.fabricar = function () {
+                console.log(`polo: ${this.marca} ${this.color}, Año: ${this.talla}`);
+            };
+        }
+ 
+        let polo1 = new Polo("Versace", "Negro", "XL");
+        let polo2 = new Polo("Dior", "Roja", "S");
+        let polo3 = new Polo("louis vuitton", "Marron", "M"); 
+    </script>
+</body>
+</html>

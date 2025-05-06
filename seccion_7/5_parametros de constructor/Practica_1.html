@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1-Constructores con parámetros</title>
+</head>
+<body>
+    <script>
+        function Automovil(marca, modelo, anio) {
+            this.marca = marca;
+            this.modelo = modelo;
+            this.anio = anio;
+            this.arrancar = function () {
+                console.log(`Automóvil: ${this.marca} ${this.modelo}, Año: ${this.anio}`);
+            };
+        }
+ 
+        let auto1 = new Automovil("porsche", "911", 2005);
+        let auto2 = new Automovil("ferrari", "F40", 1992);
+        let auto3 = new Automovil("Lamborghini", "Hurancan", 2014);
+ 
+    </script>
+</body>
+</html>

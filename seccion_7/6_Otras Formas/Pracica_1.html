@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1- Otros Objetos</title>
+</head>
+
+<body>
+    <script>
+        let Automovil = new Object();
+
+        Automovil.marca = 'Ferrari';
+        Automovil['modelo'] = 'F40';
+        Automovil.anio= '2014';
+        Automovil.encender = function () {
+            alert("Coche Prendido");
+        };
+        let Carro = Object.create (Automovil);
+    </script>
+</body>
+
+</html>

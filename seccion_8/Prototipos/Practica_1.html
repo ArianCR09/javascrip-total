@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica_1 Cadena de prototipos</title>
+</head>
+
+<body>
+    <script>
+        let auto = { 
+            marca: 'Ferrari', 
+            modelo: 'F80' 
+        };
+
+        function prototipos() {
+            let auto1 = Object.create(auto);
+            console.log(Object.getPrototypeOf(auto1));
+
+        }
+        prototipos()
+    </script>
+
+</body>
+
+</html>

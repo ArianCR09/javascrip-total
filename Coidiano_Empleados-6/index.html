@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coidiano Empleados</title>
+    <title>Registro de Empleados- Cotidiano"6"</title>
     <link rel="stylesheet" href="misEstilos.css">
+    <script src="misScrpts.js"></script>
 </head>
 <body>
     <h1>Registro de Empleados</h1>
+
     <p>Expediente</p>
     <input type="number" id="txtExpediente">
+
     <p>Nombre</p>
     <input type="text" id="txtNombre">
+
     <p>Apellido</p>
     <input type="text" id="txtApellido">
+
     <p>Fecha de Nacimiento</p>
     <input type="date" id="txtNacimiento">
+
     <p>Cargo</p>
     <input type="text" id="txtCargo">
-    <br><br>
-    <button onclick="agregarEmpleado()">Cargar Empleado</button><br><br><br>
-    <button onclick="mostrarEmpleado()">Mostrar Empleado</button>
 
+    <br><br>
+    <button onclick="registrarEmpleado()">Cargar Empleado</button><br>
+    <button onclick="mostrarListaEmpleados()">Mostrar Empleados</button>
 
 </body>
 </html>

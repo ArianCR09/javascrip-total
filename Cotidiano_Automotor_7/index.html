@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cotidiano-7 //Registro Automotor//</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+
+<body>
+    <h1>REGISTRO AUTOMOTOR</h1>
+    <button onclick="mostrarAutomoviles()">Ver registro</button>
+    <ul id="lista">
+    </ul>
+
+    <script>
+        function Coche(marca, modelo, color, anio, creador) {
+            this.marca = marca;
+            this.modelo = modelo;
+            this.color = color;
+            this.anio = anio;
+            this.creador = creador;
+        }
+
+        Coche.prototype.verAutomovil = function () {
+            return `${this.marca} ${this.modelo} - ${this.color}, ${this.anio}, ${this.creador}`;
+        };
+
+        let coche1 = new Coche("Ferrari", "F40", "Rojo", 1980, "Nicolas Materazzi");
+        let coche2 = new Coche("Lamborgini", "350 GT", "Azul", 1964, "Carrozzeria Touring");
+        let coche3 = new Coche("Nissan", "GT-R 35", "Gris", 2006, "Yoshisuke Aikawa");
+
+        let listaCoches = [coche1, coche2, coche3];
+
+        function mostrarAutomoviles() {
+            let lista = document.getElementById("lista");
+            lista.innerHTML = "";
+
+            for (let c = 0; c < listaCoches.length; c++) {
+                let item = document.createElement("li");
+                item.textContent = listaCoches[c].verAutomovil();
+                lista.appendChild(item);
+            }
+        }
+    </script>
+</body>
+
+</html>

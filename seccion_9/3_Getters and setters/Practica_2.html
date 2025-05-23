@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica-2 Getters Y setters2</title>
+</head>
+<body>
+    <script>
+        class colegio {
+            constructor(Estudiantes, Profesores, Aulas){
+                 this.Estudiantes = Estudiantes;
+                 this.Profesores = Profesores;
+                 this._Aulas = Aulas;
+            }
+            get Aulas() {
+                return this._Aulas;
+            }
+            set Aulas(nuevasAulas) {
+                this._Aulas = nuevasAulas;
+            }
+
+        }
+        let Colegio1 = new colegio(700, 40, 100);
+        console.log(Colegio1);
+
+    </script>
+    
+</body>
+</html>

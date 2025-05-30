@@ -1,0 +1,7 @@
+{
+    "nombre": "C.T.P SAN RAFAEL DE ALAJUELA",
+    "calle": "Calle Sanchez",
+    "ciudad": "Alajuela",
+    "cantEstudiantes": 2,
+    "estudiantes": ["Christopher Sequeira, Clarabel Barahona"]
+}

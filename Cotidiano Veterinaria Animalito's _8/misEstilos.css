@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #222;
+}
+
+button {
+    padding: 10px 30px;
+    font-size: 16px;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 90px;
+}
+
+button:hover {
+    background-color: #da0707;
+}
+
+ul#lista {
+    padding: 0;
+    max-width: 400px;
+    margin: 20px auto 0 auto;
+    text-align: left;
+}
+
+ul#lista li {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 10px solid #ddd;
+    border-radius: 4px;
+}

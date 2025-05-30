@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let nombre;
+        let calle;
+        let ciudad;
+        let cantEstudiantes;
+        let estudiantes;
+
+        function ejecutar() {
+            let xhr = new XMLHttpRequest();
+
+            xhr.open('GET', 'db.json', true);
+
+            xhr.responseType = 'json';
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    let datos = xhr.response;
+
+                    nombre = datos.nombre;
+                    calle = datos.calle;
+                    ciudad = datos.ciudad;
+                    cantEstudiantes = datos.cantEstudiantes;
+                    estudiantes = datos.estudiantes;
+
+                    console.log(nombre, calle, ciudad, cantEstudiantes, estudiantes);
+                }
+            };
+
+            xhr.send();  
+        }
+        
+        ejecutar()
+    </script>
+</body>
+
+</html>

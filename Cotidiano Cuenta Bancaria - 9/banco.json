@@ -1,0 +1,18 @@
+{
+  "banco": "Banco CR",
+  "sucursal": "San Jose",
+  "titular": "Arian Ruiz",
+  "cuenta": "77315399",
+  "saldos": [
+    {
+      "moneda": "USD",
+      "monto": 725.09
+    },
+    {
+      "moneda": "EUR",
+      "monto": 195.67
+    }
+  ],
+  "tarjeta": "3931855334667515",
+  "fecha_apertura": "01/05/2020"
+}

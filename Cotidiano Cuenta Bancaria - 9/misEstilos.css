@@ -1,0 +1,88 @@
+
+body {
+    background: #fffbd5; 
+background: -webkit-linear-gradient(to right, #b20a2c, #fffbd5); 
+background: linear-gradient(to right, #b20a2c, #fffbd5); 
+
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f4f8; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a1a1a;
+}
+.card {
+  background-color: #ffffff;
+  width: 340px;
+  padding: 30px 35px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.card:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
+}
+.logo {
+  width: 110px;
+  margin: 0 auto 25px auto;
+  display: block;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+}
+h1 {
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-bottom: 6px;
+  color: #004080; 
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.05rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #4a4a4a;
+}
+hr {
+  border: none;
+  height: 1.8px;
+  background: #e1e8f0;
+  margin: 20px auto;
+  width: 55%;
+  border-radius: 1px;
+}
+.datos {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #333333;
+}
+.saldos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.saldo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #004080;
+}
+.icono {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.05));
+}
+.datos-adicionales {
+  font-size: 0.9rem;
+  color: #666666;
+  letter-spacing: 0.02em;
+}
+

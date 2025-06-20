@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica-2 Callbacks</title>
+</head>
+
+<body>
+    <script>
+        function test(Callback) {
+            setTimeout(function () {
+                alert("Mensaje Impreso");
+                mensaje();
+            }, 1500);
+        }
+        function Callback(mensaje) {
+            alert(mensaje)
+        }
+
+        test(Callback)
+    </script>
+</body>
+
+</html>

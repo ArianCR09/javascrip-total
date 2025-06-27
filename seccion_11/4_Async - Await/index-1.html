@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Declaramos la variable donde guardaremos la tasa del dólar en colones
+        let dolar;
+        // Definimos el monto en dólares que queremos convertir
+        let montoDolares = 100;
+
+        // Hacemos una petición a la API para obtener la tasa de cambio actual
+        fetch('https://open.er-api.com/v6/latest/USD')
+            .then(res => res.json()) // Convertimos la respuesta a formato JSON
+            .then(data => {
+                // Guardamos la tasa de conversión de USD a CRC (colones costarricenses)
+                dolar = data.rates.CRC; // valor del dolar en colones
+                console.log("Tasa obtenida:", dolar);
+
+                // Ahora que tenemos la tasa, calculamos el equivalente en colones
+                let colones = montoDolares * dolar;
+                // Mostramos el resultado en la consola
+                console.log(`${montoDolares} dolares son aproximadamente ${colones.toFixed(2)} colones`);
+            });
+
+        // Este código se ejecuta inmediatamente, antes de que termine el fetch
+        // Por eso 'dolar' aún es undefined aquí
+        let colones = montoDolares * dolar;
+        console.log(`${montoDolares} dolares son aproximadamente ${colones} colones`);
+        // Este resultado será NaN porque 'dolar' todavía no tiene valor
+    </script>
+</body>
+
+</html>

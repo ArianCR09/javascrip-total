@@ -1,29 +1,32 @@
-<!D<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        let miPromesa = new Promise(function(resolve, reject) {
-            setTimeout(function(){
+        let miPromesa = new Promise(function (resolve, reject) {
+            setTimeout(function () {
                 let error = false;
-                if(error){
+                if (error) {
                     reject("La promesa ha fallado")
                 }
-                else{
+                else {
                     resolve("La promera se ha cumplido")
                 }
             })
         })
- 
-        miPromesa.then(function(resultado){
+
+        miPromesa.then(function (resultado) {
             console.log(resultado);
-        }).catch(function(error){
+        }).catch(function (error) {
             console.log(error)
         })
     </script>
 </body>
+
 </html>

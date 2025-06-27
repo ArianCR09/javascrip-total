@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Función asíncrona para convertir dólares a colones costarricenses
+        async function convertirDolares() {
+            // Define el monto en dólares que deseas convertir
+            let montoDolares = 100;
+            console.log("obteniendo tasa de conversasión...");
+
+            try {
+                // Hace una petición a la API para obtener la tasa de cambio actual del dólar
+                let respuesta = await fetch('https://open.er-api.com/v6/latest/USD');
+                // Convierte la respuesta a formato JSON
+                let datos = await respuesta.json();
+
+                // Obtiene la tasa de conversión de USD a CRC (colón costarricense)
+                // OJO: Hay un error en la siguiente línea, debería ser datos.rates.CRC
+                let tasaCRC = datos.rates.CRC;
+
+                // Calcula el monto equivalente en colones
+                let colones = montoDolares * tasaCRC;
+
+                // Muestra el resultado en la consola
+                console.log(`${montoDolares} dolares son aproximadamente ${colones.toFixed(2)} colones`);
+            } catch (error) {
+                // Si ocurre un error (por ejemplo, no se puede acceder a la API), se muestra aquí
+                console.error("Error al obtener la tasa:", error);
+            }
+        }
+
+        // Llama a la función para realizar la conversión al cargar la página
+        convertirDolares();
+    </script>
+</body>
+
+</html>

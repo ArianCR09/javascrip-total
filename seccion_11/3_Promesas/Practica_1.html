@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica - Promesa 1</title>
+</head>
+
+<body>
+    <script>
+        let promesa;
+
+        function test(resultado) {
+            promesa = new Promise(function (resolve, reject) {
+                if (resultado) {
+                    resolve("Correcto");
+                } else {
+                    reject("Error");
+                }
+            });
+        }
+        test(true);
+
+        promesa
+            .then(function (mensaje) {
+                console.log(mensaje);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    </script>
+</body>
+
+</html>

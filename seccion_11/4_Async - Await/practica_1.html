@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1</title>
+</head>
+
+<body>
+    <script>
+        // Convierte la función en asíncrona y usa fetch para obtener el JSON
+        async function request(url) {
+            // Realiza la petición a la URL usando fetch
+            const response = await fetch(url);
+            // Espera la conversión a JSON
+            const data = await response.json();
+            // Retorna el resultado en formato JSON
+            return data;
+        }
+
+        // Ejemplo de uso:
+        // request('datos.json').then(console.log);
+
+    </script>
+
+</body>
+
+</html>

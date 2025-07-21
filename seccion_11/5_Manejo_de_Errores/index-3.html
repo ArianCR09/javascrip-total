@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Async/Await
+        async function sumarNumeros(a, b) {
+            if (typeof a !== 'number' || typeof b !== 'number') {
+                throw new Error('alguno de los argumentos no es un número');
+            }
+            return a + b;
+        }
+
+        async function manejarErrores() {
+            try {
+                let resultado = await sumarNumeros('1', 2);
+                console.log(resultado);
+            } catch (error) {
+                console.error(error.message);
+            }
+        }
+    </script>
+</body>
+
+</html>

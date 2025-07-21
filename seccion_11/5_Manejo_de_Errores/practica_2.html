@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 2 Errores</title>
+</head>
+
+<body>
+    <script>
+        function tablaDelCinco(numero) {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    if (numero === 0) {
+                        reject(new Error('El número no puede ser 0'));
+                    } else {
+                        resolve(5 * numero);
+                    }
+                }, 1000);
+            });
+        }
+
+        function manejarErrores(numero) {
+            tablaDelCinco(numero)
+                .then(function (resultado) {
+                    console.log(resultado);
+                })
+                .catch(function (error) {
+                    console.error(error.message);
+                });
+        }
+
+        // Ejemplo de uso:
+        manejarErrores(0); // Imprime error
+        manejarErrores(3); // Imprime 15
+    </script>
+
+</body>
+
+</html>

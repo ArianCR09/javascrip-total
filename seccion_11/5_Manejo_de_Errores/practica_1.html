@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1 Errores</title>
+</head>
+
+<body>
+    <script>
+        async function tablaDelCinco(numero) {
+            if (numero === 0) {
+                throw new Error('El número no puede ser 0');
+            } else {
+                return 5 * numero;
+            }
+        }
+
+        async function manejarErrores(numero) {
+            try {
+                const resultado = await tablaDelCinco(numero);
+                console.log(resultado);
+            } catch (error) {
+                console.error(error.message);
+            }
+        }
+
+        // Ejemplo de uso:
+        manejarErrores(0); // Lanzará error
+        manejarErrores(2); // Imprimirá 10
+    </script>
+</body>
+
+</html>
